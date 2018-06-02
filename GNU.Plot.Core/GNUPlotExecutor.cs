@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -19,11 +20,16 @@ namespace GNU.Plot
             terminal += $"size {xSize},{ySize}";
         }
 
+
+
         private async Task<int> Execute(string args)
         {
-            string assembly = Assembly.GetExecutingAssembly().Location;
-            FileInfo assemblyInfo = new FileInfo(assembly);
-            string GNUPlotPath = Path.Combine(assemblyInfo.Directory.FullName, "gnuplot", "gnuplot.exe");
+            
+            string GNUPlotPath;
+            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) GNUPlotPath = GetWindowsExePath();
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)) GNUPlotPath = GetWindowsExePath();
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) GNUPlotPath = GetWindowsExePath();
+            else throw new NotImplementedException("Platform not supported");
             FileInfo GNUPlotFilePath = new FileInfo(GNUPlotPath);
             if (!GNUPlotFilePath.Exists) throw new Exception("Cannot find GNU Plot exe: " + GNUPlotFilePath.FullName);
             Process p = CreateProcess(args, GNUPlotPath);
@@ -33,6 +39,13 @@ namespace GNU.Plot
             await Task.Run(() => p.WaitForExit());
             if (p.ExitCode != 0) new ApplicationException($"GNU Plot exited with an error ({p.ExitCode}): {stdErr}");
             return p.ExitCode;
+        }
+
+        private string GetWindowsExePath()
+        {
+            string assembly = Assembly.GetExecutingAssembly().Location;
+            FileInfo assemblyInfo = new FileInfo(assembly);
+            return Path.Combine(assemblyInfo.Directory.FullName, "gnuplot", "gnuplot.exe");
         }
 
         private static Process CreateProcess(string args, string GNUPlotPath)

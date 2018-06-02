@@ -5,7 +5,7 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GNU.Plot.Core", "GNU.Plot.Core\GNU.Plot.Core.csproj", "{0857E1FF-2E71-42A4-9A13-93CB61233462}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GNU.Plot.Tests", "GNU.Plot.Tests\GNU.Plot.Tests.csproj", "{7BBDED12-1E31-4788-AED8-6A0E0FAC93EB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GNU.Plot.Windows.Tests", "GNU.Plot.Tests\GNU.Plot.Windows.Tests.csproj", "{7BBDED12-1E31-4788-AED8-6A0E0FAC93EB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GNU.Plot.Windows", "GNU.Plot.Windows\GNU.Plot.Windows.csproj", "{79D05E32-7B1B-4103-98AF-6CADAFE51CF0}"
 EndProject
