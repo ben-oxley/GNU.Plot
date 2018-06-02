@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GNU.Plot.Core", "GNU.Plot.Core\GNU.Plot.Core.csproj", "{0857E1FF-2E71-42A4-9A13-93CB61233462}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GNU.Plot.Linux", "GNU.Plot.Linux\GNU.Plot.Linux.csproj", "{F99E80BC-82CB-4F28-A964-A6D372C12A7F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0857E1FF-2E71-42A4-9A13-93CB61233462}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0857E1FF-2E71-42A4-9A13-93CB61233462}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0857E1FF-2E71-42A4-9A13-93CB61233462}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0857E1FF-2E71-42A4-9A13-93CB61233462}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F99E80BC-82CB-4F28-A964-A6D372C12A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F99E80BC-82CB-4F28-A964-A6D372C12A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F99E80BC-82CB-4F28-A964-A6D372C12A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F99E80BC-82CB-4F28-A964-A6D372C12A7F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7111E214-B547-4E15-AE00-816DABCFFFCF}
+	EndGlobalSection
+EndGlobal
