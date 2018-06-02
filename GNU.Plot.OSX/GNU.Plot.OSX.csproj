@@ -12,4 +12,9 @@
     <ProjectReference Include="..\GNU.Plot.Core\GNU.Plot.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="gnuplot\gnuplot\5.2.3\bin\gnuplot">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

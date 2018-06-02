@@ -28,7 +28,7 @@ namespace GNU.Plot
             string GNUPlotPath;
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows)) GNUPlotPath = GetWindowsExePath();
             else if (RuntimeInformation.IsOSPlatform(OSPlatform.Linux)) GNUPlotPath = GetWindowsExePath();
-            else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) GNUPlotPath = GetWindowsExePath();
+            else if (RuntimeInformation.IsOSPlatform(OSPlatform.OSX)) GNUPlotPath = GetOSXExePath();
             else throw new NotImplementedException("Platform not supported");
             FileInfo GNUPlotFilePath = new FileInfo(GNUPlotPath);
             if (!GNUPlotFilePath.Exists) throw new Exception("Cannot find GNU Plot exe: " + GNUPlotFilePath.FullName);
@@ -39,6 +39,13 @@ namespace GNU.Plot
             await Task.Run(() => p.WaitForExit());
             if (p.ExitCode != 0) new ApplicationException($"GNU Plot exited with an error ({p.ExitCode}): {stdErr}");
             return p.ExitCode;
+        }
+
+        private string GetOSXExePath()
+        {
+            string assembly = Assembly.GetExecutingAssembly().Location;
+            FileInfo assemblyInfo = new FileInfo(assembly);
+            return Path.Combine(assemblyInfo.Directory.FullName, "gnuplot", "gnuplot","5.2.3","bin", "gnuplot");
         }
 
         private string GetWindowsExePath()

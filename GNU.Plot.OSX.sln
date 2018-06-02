@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GNU.Plot.Core", "GNU.Plot.Core\GNU.Plot.Core.csproj", "{0857E1FF-2E71-42A4-9A13-93CB61233462}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GNU.Plot.Core", "GNU.Plot.Core\GNU.Plot.Core.csproj", "{0857E1FF-2E71-42A4-9A13-93CB61233462}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GNU.Plot.OSX", "GNU.Plot.OSX\GNU.Plot.OSX.csproj", "{6F7ACD5D-8743-435E-8FA3-945716AA4BAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GNU.Plot.OSX", "GNU.Plot.OSX\GNU.Plot.OSX.csproj", "{6F7ACD5D-8743-435E-8FA3-945716AA4BAC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GNU.Plot.OSX.Test", "GNU.Plot.OSX.Test\GNU.Plot.OSX.Test.csproj", "{30D49C3D-53F4-4B18-A4A7-7DAB8EDB1980}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6F7ACD5D-8743-435E-8FA3-945716AA4BAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6F7ACD5D-8743-435E-8FA3-945716AA4BAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6F7ACD5D-8743-435E-8FA3-945716AA4BAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30D49C3D-53F4-4B18-A4A7-7DAB8EDB1980}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30D49C3D-53F4-4B18-A4A7-7DAB8EDB1980}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30D49C3D-53F4-4B18-A4A7-7DAB8EDB1980}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30D49C3D-53F4-4B18-A4A7-7DAB8EDB1980}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
